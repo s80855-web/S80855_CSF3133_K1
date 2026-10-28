@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Course Feedback</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>CSF3133 Course Feedback</h1>
+    </header> <!-- Incorrect closing </head> tag. Corrected to </header>. -->
+
+    <nav>
+        <a href="#results">Results</a> |
+        <a href="#form">Feedback Form</a>
+    </nav>
+
+    <section id="results">
+        <h2>Feedback Summary</h2>
+
+        <table border="1">
+            <tr>
+                <th>Week</th>
+                <th>Topic</th>
+                <th>Rating</th> <!-- Used <td> instead of <th> for the table heading. -->
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>Introduction to HTML</td>
+                <td>4.5</td>
+            </tr> <!-- Missing closing </tr> tag. -->
+
+            <tr>
+                <td>2</td>
+                <td>Tables and Forms</td> <!-- Incorrect colspan="3". Removed colspan to maintain three columns. -->
+                <td>4.2</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Semantic HTML</td> <!-- Missing closing </td> tag. -->
+                <td>4.0</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="form">
+        <h2>Give Your Feedback</h2>
+
+        <form action="submit_feedback.php" method="post">
+
+            <!-- Student Name -->
+            <label for="fullname">Name:</label> <!-- Incorrect for="name". Corrected to match id="fullname". -->
+            <br>
+            <input type="text" id="fullname" name="name">
+            <br><br>
+
+            <fieldset>
+            <!-- Overall Rating -->
+                <legend>Overall Rating:</legend>
+
+                <input type="radio" id="good" name="rating" value="good">
+                <label for="good">Good</label>
+                <br>
+
+                <input type="radio" id="poor" name="rating" value="poor">
+                <!-- Radio buttons used different names. Both now use name="rating". -->
+                <label for="poor">Poor</label>
+            </fieldset>
+
+            <br>
+
+            <!-- Lab Attendance -->
+            <input type="checkbox" id="lab" name="lab" value="yes">
+            <label for="lab">I attended all labs</label>
+            <!-- Incorrect for="labs". Corrected to for="lab". -->
+
+            <br><br>
+
+            <input type="submit" value="Submit">
+
+        </form> <!-- Incorrect closing </from> tag. Corrected to </form>. -->
+
+    </section>
+
+    <footer>
+        <p>Copyright &copy; 2026 CSF3133</p>
+        <!-- Missing semicolon in &copy. Corrected to &copy;. -->
+    </footer>
+
+</body>
+</html>
