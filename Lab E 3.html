@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Contact Form</title>
+</head>
+
+<body>
+
+    <!-- HEADER SECTION -->
+    <div id="header">
+
+        <h1>Welcome to Our Contact Page</h1>
+
+        <p>
+            <span>We are happy to hear from you!</span>
+        </p>
+
+    </div>
+
+    <hr>
+
+    <!-- CONTENT SECTION -->
+    <div id="content">
+
+        <h2>Contact Form</h2>
+
+        <form action="" method="get">
+
+            <p>
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email"
+                       placeholder="Enter your email"
+                       required>
+            </p>
+
+            <p>
+                <label for="date">Preferred Contact Date:</label>
+                <input type="date" id="date" name="date"
+                       required>
+            </p>
+
+            <p>
+                <label for="satisfaction">
+                    Satisfaction Level (0-10):
+                </label>
+
+                <input type="range"
+                    id="satisfaction"
+                    name="satisfaction"
+                    min="0"
+                    max="10"
+                    step="1"
+                    value="5"
+                    oninput="satisfactionValue.value = this.value">
+
+                <output id="satisfactionValue">5</output>
+            </p>
+
+        </form>
+
+        <hr>
+
+        <!-- INLINE CALCULATOR -->
+        <div id="calculator">
+
+            <h2>Inline Calculator</h2>
+
+            <p>Enter two numbers to calculate their sum.</p>
+
+            <form oninput="result.value =
+                Number(num1.value) + Number(num2.value)">
+
+                <label for="num1">First Number:</label>
+
+                <input type="number"
+                       id="num1"
+                       name="num1"
+                       value="0">
+
+                <br><br>
+
+                <label for="num2">Second Number:</label>
+
+                <input type="number"
+                       id="num2"
+                       name="num2"
+                       value="0">
+
+                <br><br>
+
+                <label for="result">Result:</label>
+
+                <output id="result"
+                        name="result"
+                        for="num1 num2">0</output>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    <!-- FOOTER SECTION -->
+    <div id="footer">
+
+        <h3>Contact Information</h3>
+
+        <p>
+            Email:
+            <a href="mailto:contact@example.com">
+                contact@example.com
+            </a>
+        </p>
+
+        <p>
+            Phone: +60 12-345 6789
+        </p>
+
+        <p>
+            &copy; 2026 Interactive Contact Page.
+            All Rights Reserved.
+        </p>
+
+    </div>
+
+</body>
+</html>
