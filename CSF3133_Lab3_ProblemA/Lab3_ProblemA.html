@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>UMT Bakery</title>
+</head>
+
+<body>
+
+        <!-- HEADER SECTION -->
+    <div id="header">
+        <h1>UMT Bakery <span>Freshly Baked with Love!</span></h1>
+        <p>Welcome to UMT Bakery!</p>
+    </div>
+
+    <hr>
+
+    <!-- NAVIGATION SECTION -->
+    <div id="nav">
+        <a href="#content">Home</a> |
+        <a href="#sidebar">Price List</a> |
+        <a href="#order">Order Now</a> |
+        <a href="#footer">Contact Us</a>
+    </div>
+
+    <hr>
+
+    <!-- CONTENT SECTION -->
+    <div id="content">
+
+            <h2>Welcome to UMT Bakery!</h2>
+
+    <p>
+        At <strong>UMT Bakery</strong>, we offer
+        <em>fresh and delicious</em> baked goods
+        for everyone on campus.
+        Enjoy our <span>special student prices</span>
+        and <a href="#order">place your order today!</a>
+    </p>
+
+        <h2>Why Choose Us?</h2>
+
+        <ul>
+            <li>Freshly baked every day</li>
+            <li>Affordable student prices</li>
+            <li>Various flavours available</li>
+            <li>Easy online pre-order</li>
+        </ul>
+
+        <!-- ORDER FORM SECTION -->
+        <div id="order">
+
+            <h2>Campus Bakery Online Order Form</h2>
+
+            <form action="#"
+                  oninput="total.value =
+                  (Number(cupcakes.value) * 3) +
+                  (Number(slices.value) * 5)">
+
+                <fieldset>
+                    <legend>Customer Information</legend>
+
+                    <p>
+                        <label for="customer">Customer Name:</label>
+                        <input type="text"
+                               id="customer"
+                               name="customer"
+                               placeholder="Enter your full name"
+                               required autofocus>
+                    </p>
+
+                    <p>
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel"
+                               id="phone"
+                               name="phone"
+                               placeholder="0123456789"
+                               required>
+                    </p>
+
+                    <p>
+                        <label for="email">Email Address:</label>
+                        <input type="email"
+                               id="email"
+                               name="email"
+                               placeholder="example@gmail.com"
+                               required>
+                    </p>
+
+                </fieldset>
+
+                <br>
+
+                <!-- PICK-UP DETAILS -->
+                <fieldset>
+                    <legend>Pick-up Details</legend>
+
+                    <p>
+                        <label for="date">Pick-up Date:</label>
+                        <input type="date"
+                               id="date"
+                               name="date">
+                    </p>
+
+                    <p>
+                        <label for="time">Pick-up Time:</label>
+                        <input type="time"
+                               id="time"
+                               name="time">
+                    </p>
+
+                </fieldset>
+
+                <br>
+
+                <!-- BAKERY PREFERENCES -->
+                <fieldset>
+                    <legend>Bakery Preferences</legend>
+
+                    <p>
+                        <label for="flavour">Choose Flavour:</label>
+                        <input type="text"
+                               id="flavour"
+                               name="flavour"
+                               list="flavours"
+                               placeholder="Select your flavour">
+
+                        <datalist id="flavours">
+                            <option value="Chocolate">
+                            <option value="Vanilla">
+                            <option value="Strawberry">
+                            <option value="Red Velvet">
+                        </datalist>
+                    </p>
+
+                    <p>
+                        <label for="icing">Icing Colour:</label>
+                        <input type="color"
+                               id="icing"
+                               name="icing">
+                    </p>
+
+                    <p>
+                        <label for="sweetness">Sweetness Level (1-5):</label>
+                        <input type="range"
+                               id="sweetness"
+                               name="sweetness"
+                               min="1"
+                               max="5"
+                               step="1"
+                               value="3"
+                               oninput="sweetnessValue.value = this.value">
+
+                        <output name="sweetnessValue"
+                                for="sweetness">3</output>
+                    </p>
+
+                </fieldset>
+
+                <br>
+
+                <!-- PRICE CALCULATOR SECTION -->
+                <fieldset>
+                    <legend>Order Quantity and Price Calculator</legend>
+
+                    <p>Cupcakes: RM 3.00 each</p>
+                    <p>Cake Slices: RM 5.00 each</p>
+
+                    <p>
+                        <label for="cupcakes">Number of Cupcakes:</label>
+                        <input type="number"
+                               id="cupcakes"
+                               name="cupcakes"
+                               min="0"
+                               value="0">
+                    </p>
+
+                    <p>
+                        <label for="slices">Number of Cake Slices:</label>
+                        <input type="number"
+                               id="slices"
+                               name="slices"
+                               min="0"
+                               value="0">
+                    </p>
+
+                    <p>
+                        <strong>Total Price: RM
+                            <output name="total"
+                                    for="cupcakes slices">0</output>
+                        </strong>
+                    </p>
+
+                </fieldset>
+
+                <br>
+
+                <!-- SUBMIT BUTTON -->
+                <input type="submit" value="Submit Order">
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    <!-- SIDEBAR SECTION -->
+    <div id="sidebar">
+
+        <h2>Price List</h2>
+
+        <p>UMT Bakery&reg; Menu</p>
+
+        <ul>
+            <li>Chocolate Cupcake - RM&nbsp;3.00</li>
+            <li>Vanilla Cupcake - RM&nbsp;3.00</li>
+            <li>Strawberry Cupcake - RM&nbsp;3.00</li>
+            <li>Red Velvet Cupcake - RM&nbsp;3.00</li>
+            <li>Chocolate Cake Slice - RM&nbsp;5.00</li>
+            <li>Vanilla Cake Slice - RM&nbsp;5.00</li>
+        </ul>
+
+        <p>
+            Special Offer:
+            Orders &gt; 10 pieces get a free drink!
+        </p>
+
+    </div>
+
+    <hr>
+
+
+        <!-- FOOTER SECTION -->
+        <div id="footer">
+            <p>&copy; 2026 UMT Bakery&reg;.</p>
+            <p>All rights reserved.</p>
+            <p>Contact us:
+                <a href="mailto:umt-bakery@example.com">
+                    umt-bakery@example.com
+                </a>
+            </p>
+        </div>
+
+    <!--
+    TESTING OBSERVATIONS:
+
+    1. When Submit Order is clicked with all required
+       fields empty, the browser prevents submission
+       and asks the user to complete a required field.
+
+    2. When "myemail" is entered into the email field
+       and the form is submitted, the browser rejects
+       the invalid email address.
+
+    3. The price calculator updates automatically
+       when the cupcake or cake slice quantity changes.
+
+    4. Two cupcakes and one cake slice produce
+       a total price of RM 11.
+    -->
+
+</body>
+</html>
