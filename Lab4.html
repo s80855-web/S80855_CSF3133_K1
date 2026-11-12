@@ -1,0 +1,284 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UMT Student Life</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Internal CSS -->
+    <style>
+        .welcome-text {
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        #special-message {
+            font-style: italic;
+            color: #17627a;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER SECTION -->
+    <header id="home">
+        <h1>Welcome to UMT Student Life</h1>
+        <p>Universiti Malaysia Terengganu</p>
+        <p>Learn, Explore and Grow Together!</p>
+    </header>
+
+    <!-- NAVIGATION BAR -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About UMT</a></li>
+            <li><a href="#activities">Activities</a></li>
+            <li><a href="#video">Campus Video</a></li>
+            <li><a href="#register">Registration</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- ABOUT SECTION -->
+        <section id="about">
+
+            <h2 class="welcome-text">About UMT</h2>
+
+            <article>
+                <h3>Discover Our University</h3>
+
+                <p>
+                    Universiti Malaysia Terengganu (UMT) provides
+                    students with opportunities to develop their
+                    academic knowledge, practical skills and
+                    personal interests.
+                </p>
+
+                <p id="special-message">
+                    At UMT, learning goes beyond the classroom!
+                </p>
+
+                <p>
+                    Visit the
+                    <a href="https://www.umt.edu.my/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Official UMT Website
+                    </a>
+                    for more information.
+                </p>
+            </article>
+
+        </section>
+
+        <!-- STUDENT ACTIVITIES SECTION -->
+        <section id="activities">
+
+            <h2>Student Activities</h2>
+
+            <div class="activity-container">
+
+                <article class="activity-card">
+                    <h3>Sports and Recreation</h3>
+                    <p>
+                        Participate in sports activities,
+                        fitness programmes and recreational events.
+                    </p>
+                </article>
+
+                <article class="activity-card">
+                    <h3>Academic Programmes</h3>
+                    <p>
+                        Join academic workshops, competitions
+                        and educational programmes.
+                    </p>
+                </article>
+
+                <article class="activity-card">
+                    <h3>Clubs and Societies</h3>
+                    <p>
+                        Develop teamwork and leadership skills
+                        through student organisations.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- VIDEO SECTION -->
+        <section id="video">
+
+            <h2>Campus Video</h2>
+
+            <p>
+                Watch this video to explore student life
+                and campus activities.
+            </p>
+
+            <video controls width="600">
+                <source
+                    src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+                    type="video/mp4">
+
+                Your browser does not support HTML5 video.
+            </video>
+
+            <p>
+                Note: This is a sample video used to
+                demonstrate the HTML5 video element.
+            </p>
+
+        </section>
+
+        <!-- REGISTRATION SECTION -->
+        <section id="register">
+
+            <h2>Student Interest Registration</h2>
+
+            <p>
+                Complete the form below to register
+                your interests.
+            </p>
+
+            <form id="studentForm"
+                  onsubmit="showConfirmation(event)">
+
+                <fieldset>
+
+                    <legend>Personal Information</legend>
+
+                    <!-- NAME INPUT -->
+                    <p>
+                        <label for="name">Full Name:</label>
+
+                        <input type="text"
+                               id="name"
+                               name="name"
+                               placeholder="Enter your full name"
+                               required>
+                    </p>
+
+                    <!-- EMAIL INPUT -->
+                    <p>
+                        <label for="email">Email Address:</label>
+
+                        <input type="email"
+                               id="email"
+                               name="email"
+                               placeholder="example@gmail.com"
+                               required>
+                    </p>
+
+                    <!-- GENDER RADIO BUTTONS -->
+                    <p>Gender:</p>
+
+                    <p>
+                        <input type="radio"
+                               id="male"
+                               name="gender"
+                               value="Male"
+                               required>
+
+                        <label for="male">Male</label>
+
+                        <input type="radio"
+                               id="female"
+                               name="gender"
+                               value="Female">
+
+                        <label for="female">Female</label>
+                    </p>
+
+                    <!-- HOBBIES CHECKBOXES -->
+                    <p>Favourite Hobbies:</p>
+
+                    <p>
+                        <input type="checkbox"
+                               id="reading"
+                               name="hobbies"
+                               value="Reading">
+
+                        <label for="reading">Reading</label>
+                    </p>
+
+                    <p>
+                        <input type="checkbox"
+                               id="sports"
+                               name="hobbies"
+                               value="Sports">
+
+                        <label for="sports">Sports</label>
+                    </p>
+
+                    <p>
+                        <input type="checkbox"
+                               id="music"
+                               name="hobbies"
+                               value="Music">
+
+                        <label for="music">Music</label>
+                    </p>
+
+                    <p>
+                        <input type="checkbox"
+                               id="travel"
+                               name="hobbies"
+                               value="Travelling">
+
+                        <label for="travel">Travelling</label>
+                    </p>
+
+                    <!-- SUBMIT BUTTON -->
+                    <p>
+                        <button type="submit">
+                            Submit Registration
+                        </button>
+                    </p>
+
+                </fieldset>
+
+            </form>
+
+            <!-- CONFIRMATION MESSAGE -->
+            <div id="confirmation" hidden>
+                <h3>Registration Submitted Successfully!</h3>
+                <p>Thank you for completing the form.</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer>
+
+        <p>&copy; 2026 UMT Student Life. All rights reserved.</p>
+
+        <p>
+            Universiti Malaysia Terengganu |
+            <a href="#home">Back to Top</a>
+        </p>
+
+    </footer>
+
+    <!-- JAVASCRIPT FOR FORM CONFIRMATION -->
+    <script>
+        function showConfirmation(event) {
+            event.preventDefault();
+
+            document.getElementById("confirmation").hidden = false;
+        }
+    </script>
+
+</body>
+</html>

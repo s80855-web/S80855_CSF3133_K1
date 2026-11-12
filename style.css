@@ -1,0 +1,305 @@
+
+/* GENERAL PAGE STYLING */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f2ff;
+    color: #30243d;
+    line-height: 1.6;
+}
+
+/* HEADER */
+
+header {
+    background-color: #7041a6;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+header p {
+    margin: 5px;
+}
+
+/* NAVIGATION BAR */
+
+nav {
+    background-color: #422168;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a:link,
+nav a:visited {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 22px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: #9464cf;
+    color: white;
+    text-decoration: underline;
+}
+
+nav a:active {
+    background-color: #e4c6ff;
+    color: #301347;
+}
+
+/* MAIN CONTENT */
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* SECTIONS */
+
+section {
+    background-color: white;
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #e0ccef;
+}
+
+section h2 {
+    color: #67349c;
+    border-bottom: 2px solid #b18bde;
+    padding-bottom: 10px;
+}
+
+/* ARTICLE */
+
+article {
+    margin-top: 15px;
+}
+
+article h3 {
+    color: #653391;
+}
+
+/* ACTIVITY CARDS */
+
+.activity-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.activity-card {
+    flex: 1 1 250px;
+    background-color: #f0e6ff;
+    border: 1px solid #d5b8f4;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.activity-card h3 {
+    text-decoration: underline;
+}
+
+/* CONTENT LINKS */
+
+main a:link {
+    color: #7041a6;
+}
+
+main a:visited {
+    color: #663399;
+}
+
+main a:hover {
+    color: #a349bd;
+    text-decoration: underline;
+}
+
+main a:active {
+    color: #d12d91;
+}
+
+/* VIDEO */
+
+video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 8px;
+    background-color: black;
+}
+
+/* REGISTRATION FORM */
+
+form {
+    margin-top: 20px;
+}
+
+fieldset {
+    border: 2px solid #7041a6;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+legend {
+    font-weight: bold;
+    color: #67349c;
+    padding: 0 10px;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #b9a2d4;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input:focus {
+    outline: 2px solid #9464cf;
+    outline-offset: 2px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 6px;
+    cursor: pointer;
+    accent-color: #7041a6;
+}
+
+/* SUBMIT BUTTON */
+
+button {
+    background-color: #7041a6;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #51267f;
+}
+
+button:active {
+    background-color: #d5a8f5;
+    color: #301347;
+}
+
+/* CONFIRMATION MESSAGE */
+
+#confirmation {
+    background-color: #f0e6ff;
+    border: 1px solid #ad83d7;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 20px;
+    color: #51267f;
+}
+
+#confirmation[hidden] {
+    display: none;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #422168;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a:link,
+footer a:visited {
+    color: white;
+}
+
+footer a:hover {
+    color: #e4c6ff;
+}
+
+footer a:active {
+    color: #d5a8f5;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media screen and (max-width: 768px) {
+
+    header {
+        padding: 25px 15px;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav a:link,
+    nav a:visited {
+        padding: 12px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    .activity-container {
+        flex-direction: column;
+    }
+
+    .activity-card {
+        width: 100%;
+    }
+
+    fieldset {
+        padding: 12px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
